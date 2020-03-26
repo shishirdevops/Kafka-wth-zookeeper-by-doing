@@ -31,12 +31,13 @@ echo '  ]
 @@@@@@@@@@@@run script to get json@@@@@@@@@@@@@
 $ ./reassign.sh > reassign.json
 
-@@@@@@@@@@@@run belwo command to update replication factor or reassign properties@@@@@@@@@@@
+@@@@@@@@@@@@run below command to update replication factor or reassign properties@@@@@@@@@@@
 
-First verify:
+#Verify if the reassignment completed as specified by the --reassignment-json-file option. If there is a throttle engaged for the replicas specified, and the rebalance has completed, the throttle will be removed:
+
 $kafka-reassign-partitions --zookeeper vkc-zk1:2181 --reassignment-json-file reassign.json --verify
 
-execute:
+#execute:
 $kafka-reassign-partitions --zookeeper vkc-zk1:2181 --reassignment-json-file reassign.json --execute
 
 

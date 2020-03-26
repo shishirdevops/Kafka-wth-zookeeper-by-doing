@@ -1,0 +1,17 @@
+[user@broker1 bin]$  ./kafka-topics.sh --zookeeper vkc-zk1:2181 --describe
+Topic:first     PartitionCount:3        ReplicationFactor:1     Configs:
+        Topic: first    Partition: 0    Leader: 1       Replicas: 1     Isr: 1
+        Topic: first    Partition: 1    Leader: 2       Replicas: 2     Isr: 2
+        Topic: first    Partition: 2    Leader: 1       Replicas: 1     Isr: 1
+Topic:second    PartitionCount:4        ReplicationFactor:1     Configs:
+        Topic: second   Partition: 0    Leader: 3       Replicas: 3     Isr: 3
+        Topic: second   Partition: 1    Leader: 1       Replicas: 1     Isr: 1
+        Topic: second   Partition: 2    Leader: 2       Replicas: 2     Isr: 2
+        Topic: second   Partition: 3    Leader: 1       Replicas: 1     Isr: 1
+Topic:test1     PartitionCount:1        ReplicationFactor:1     Configs:
+        Topic: test1    Partition: 0    Leader: 2       Replicas: 2     Isr: 2
+Topic:test2     PartitionCount:4        ReplicationFactor:1     Configs:
+        Topic: test2    Partition: 0    Leader: 2       Replicas: 2     Isr: 2
+        Topic: test2    Partition: 1    Leader: 1       Replicas: 1     Isr: 1
+        Topic: test2    Partition: 2    Leader: 1       Replicas: 1     Isr: 1
+        Topic: test2    Partition: 3    Leader: 3       Replicas: 3     Isr: 3

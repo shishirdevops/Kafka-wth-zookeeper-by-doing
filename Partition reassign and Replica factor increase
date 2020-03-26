@@ -34,7 +34,7 @@ $ ./reassign.sh > reassign.json
 @@@@@@@@@@@@run belwo command to update replication factor or reassign properties@@@@@@@@@@@
 
 First verify:
-$kafka-reassign-partitions --zookeeper vkc-zk1:2181 --reassignment-json-file reassign.json --verfiry
+$kafka-reassign-partitions --zookeeper vkc-zk1:2181 --reassignment-json-file reassign.json --verify
 
 execute:
 $kafka-reassign-partitions --zookeeper vkc-zk1:2181 --reassignment-json-file reassign.json --execute

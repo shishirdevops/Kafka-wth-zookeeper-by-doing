@@ -17,7 +17,7 @@ for t in $topics; do
 #echo ${lines[@]:(-1)}
 #echo $[pcount - 1]
         if [ "${t}" == "${lines[@]:(-1)}" ] && [ "$[pcount - 1]" == "$i" ]; then sep=""; fi
-        randombrokers=$(echo "$brokerids" | sed -r 's/,/ /g' | tr " " "\n" | shuf | tr  "\n" "," | head -c -$replicas | head -c -1)
+        randombrokers=$(echo "$brokerids" | sed -r 's/,/ /g' | tr " " "\n" | shuf | tr  "\n" "," | head -c -1)
         echo "    {\"topic\":\"${t}\",\"partition\":${i},\"replicas\":[${randombrokers}]}$sep"
     done
 done
